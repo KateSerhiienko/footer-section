@@ -1,0 +1,32 @@
+{
+  "name": "footer-section",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KateSerhiienko/footer-section.git"
+  },
+  "author": "Kateryna Serhiienko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KateSerhiienko/footer-section/issues"
+  },
+  "homepage": "https://github.com/KateSerhiienko/footer-section#readme",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "del": "^6.0.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-replace": "^1.1.3",
+    "gulp-webp-html-nosvg": "^1.0.5"
+  }
+}
