@@ -1,6 +1,5 @@
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
-import rename from 'gulp-rename';
 
 import cleanCss from 'gulp-clean-css';
 import webpcss from 'gulp-webpcss';
@@ -31,9 +30,9 @@ export const scss = () => {
       overrideBrowserlist: ["last 3 versions"],
       cascade: true
     }))
-    .pipe(app.gulp.dest(app.path.build.css))
+    .pipe(app.gulp.dest(app.path.build.css)) // not min
     .pipe(cleanCss())
-    .pipe(rename({
+    .pipe(app.plugins.rename({
       extname: ".min.css"
     }))
     .pipe(app.gulp.dest(app.path.build.css))
