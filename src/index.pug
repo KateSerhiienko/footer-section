@@ -8,15 +8,28 @@ html(lang="en")
     title Document
   body
     footer
-      |
-      |
-      span HI
-      |
-      |
-      img(src="@img/twitter.png", alt="Twitter")
-      |
-      |
-      span HI
-      |
-      |
+      .wrapper
+        .contacts
+          .contacts-item
+            b Телефон
+            a(href="tel:+123-45-67") 123-45-67
+          .contacts-item
+            b Электронная почта
+            a(href="mailto:email@gmail.com") email@gmail.com
+        .social
+          a.social-item
+            img(src="@img/twitter.png", alt="Twitter")
+          a.social-item
+            img(src="@img/facebook.png", alt="Facebook")
+          a.social-item
+            img(src="@img/vk.png", alt="Vkontakte")
+          a.social-item
+            img(src="@img/instagram.png", alt="Instagram")
+        form(action="")
+          input(type="text", placeholder="Ваше имя")
+          input(type="tel", placeholder="Ваш телефон")
+          input(type="submit", value="Записаться")
+          p Наш менеджер свяжется с вами в течении дня
+
+
     script(src="js/app.min.js") 
