@@ -8,6 +8,7 @@ global.app = {
   plugins: plugins
 }
 
+import { fonts } from "./gulp/tasks/fonts.js"
 import { reset } from "./gulp/tasks/reset.js"
 import { html } from "./gulp/tasks/html.js"
 import { server } from "./gulp/tasks/server.js"
@@ -22,7 +23,7 @@ function watcher() {
   gulp.watch(path.watch.images, images);
 }
 
-const mainTasks = gulp.parallel(html, scss, js, images);
+const mainTasks = gulp.parallel(fonts, html, scss, js, images);
 const finalTasks = gulp.parallel(watcher, server);
 
 const dev = gulp.series(reset, mainTasks, finalTasks);

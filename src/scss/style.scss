@@ -1,19 +1,105 @@
+@import 'fonts.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #333;
-  // background-image: url('@img/twitter.png');
-  span {
-    color: red;
+  background-color: #333333;
+  font-family: 'NotoSans', sans-serif;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-areas: 'cnts scl frm';
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 120px 200px;
+  background-color: #faf0d7;
+}
+
+.contacts {
+  grid-area: cnts;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &-item {
+    display: flex;
+    flex-direction: column;
+    text-shadow: 0 4px 4px rgba($color: #000000, $alpha: 0.25);
+  }
+  b {
+    font-size: 20px;
+    line-height: 1.9;
+    color: #435fdd;
+  }
+  a {
+    font-size: 18px;
+    font-weight: 500;
+    color: #484848;
+    text-decoration: none;
   }
 }
 
-@media (max-width: 768px) {
-  span {
-    font-size: 30px;
+.social {
+  grid-area: scl;
+  width: 174px;
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #fe4e4e;
+  }
+  .icon {
+    &1 {
+      width: 31px;
+    }
+    &2 {
+      width: 28px;
+      height: 28px;
+    }
+    &3 {
+      width: 33px;
+    }
+    &4 {
+      width: 28px;
+      height: 28px;
+    }
   }
 }
 
-@media (max-width: 768px) {
-  body {
-    background-color: green;
+form {
+  grid-area: frm;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1012px) {
+  footer {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 'cnts scl' 'cnts frm';
+    padding: 70px 110px;
+  }
+}
+@media (max-width: 499px) {
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'scl' 'cnts' 'frm';
+    padding: 50px 120px;
   }
 }
