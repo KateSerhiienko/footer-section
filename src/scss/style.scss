@@ -1,4 +1,6 @@
 @import 'fonts.scss';
+@import 'assets.scss';
+@import 'media.scss';
 
 * {
   padding: 0;
@@ -8,13 +10,16 @@
 
 body {
   background-color: #333333;
+  font-size: 18px;
   font-family: 'NotoSans', sans-serif;
+  color: $text-color;
 }
 
 footer {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
   grid-template-areas: 'cnts scl frm';
+  grid-column-gap: 10px;
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
@@ -35,14 +40,17 @@ footer {
   }
   b {
     font-size: 20px;
-    line-height: 1.9;
+    line-height: 2.2;
     color: #435fdd;
   }
   a {
-    font-size: 18px;
     font-weight: 500;
-    color: #484848;
+    color: $text-color;
     text-decoration: none;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: $main-color;
+    }
   }
 }
 
@@ -61,24 +69,39 @@ footer {
     justify-content: center;
     width: 64px;
     height: 64px;
+    border: 3px solid $main-color;
     border-radius: 50%;
-    background-color: #fe4e4e;
+    background-color: $main-color;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      background-color: #ffffff;
+      use {
+        fill: $main-color;
+      }
+    }
   }
   .icon {
     &1 {
-      width: 31px;
+      width: 32px;
+      height: 26px;
     }
     &2 {
       width: 28px;
       height: 28px;
     }
     &3 {
-      width: 33px;
+      width: 34px;
+      height: 21px;
     }
     &4 {
       width: 28px;
       height: 28px;
     }
+  }
+  use {
+    fill: #ffffff;
+    transition: 0.3s ease-in-out;
   }
 }
 
@@ -87,19 +110,36 @@ form {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-@media (max-width: 1012px) {
-  footer {
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: 'cnts scl' 'cnts frm';
-    padding: 70px 110px;
+  justify-content: space-between;
+  align-content: space-between;
+  input {
+    width: 224px;
+    height: 58px;
+    padding-left: 30px;
+    border-radius: 37px;
+    border: 3px solid #ffffff;
+    background-color: #ffffff;
+    font-size: inherit;
+    transition: 0.3s ease-in-out;
+    outline: none;
+    &:focus {
+      filter: brightness(0.95);
+      transition: 0.3s ease-in-out;
+    }
   }
-}
-@media (max-width: 499px) {
-  footer {
-    grid-template-columns: 1fr;
-    grid-template-areas: 'scl' 'cnts' 'frm';
-    padding: 50px 120px;
+  .submit {
+    padding: 0;
+    border: 3px solid $main-color;
+    background-color: $main-color;
+    color: #ffffff;
+    &:hover {
+      background-color: #ffffff;
+      color: $main-color;
+      font-weight: 500;
+    }
+  }
+  p {
+    width: 224px;
+    line-height: 1.6;
   }
 }

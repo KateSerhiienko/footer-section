@@ -6,25 +6,22 @@ const srcFolder = './src';
 
 export const path = {
   build: {
-    js: `${buildFolder}/js/`,
-    images: `${buildFolder}/img/`,
-    css: `${buildFolder}/css/`,
     html: `${buildFolder}/`,
+    css: `${buildFolder}/css/`,
     fonts: `${buildFolder}/fonts/`,
+    svg: `${buildFolder}/svg/`,
   },
   src: {
-    js: `${srcFolder}/js/app.js`,
-    images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
-    scss: `${srcFolder}/scss/style.scss`,
     html: `${srcFolder}/*.pug`,
+    scss: `${srcFolder}/scss/style.scss`,
     fonts: `${srcFolder}/fonts/*.*`,
+    svg: `${srcFolder}/svg/*.svg`,
   },
   watch: {
-    js: `${srcFolder}/js/**/*.js`,
-    images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
-    scss: `${srcFolder}/scss/**/*.scss`,
     html: `${srcFolder}/*.pug`,
+    scss: `${srcFolder}/scss/**/*.scss`,
     fonts: `${srcFolder}/fonts/*.*`,
+    svg: `${srcFolder}/svg/*.svg`,
   },
   clean: buildFolder,
   buildFolder: buildFolder,

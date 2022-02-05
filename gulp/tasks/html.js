@@ -1,4 +1,3 @@
-import webpHtmlNosvg from "gulp-webp-html-nosvg";
 import pug from "gulp-pug";
 
 export const html = () => {
@@ -14,7 +13,6 @@ export const html = () => {
       verbose: true
     }))
     .pipe(app.plugins.replace(/@img\//g, 'img/'))
-    .pipe(webpHtmlNosvg())
     .pipe(app.gulp.dest(app.path.build.html))
     .pipe(app.plugins.browsersync.stream());
 }

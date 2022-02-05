@@ -18,24 +18,28 @@ html(lang="en")
       .social
         |
         |
-        a.social-item
-          img.icon1(src="@img/twitter.png", alt="Twitter")
+        a.social-item(target="_blank")
+          svg.icon1
+            use(xlink:href="./svg/sprite.svg#twitter")
         |
         |
-        a.social-item
-          img.icon2(src="@img/facebook.png", alt="Facebook")
+        a.social-item(target="_blank")
+          svg.icon1
+            use(xlink:href="./svg/sprite.svg#facebook")
         |
         |
-        a.social-item
-          img.icon3(src="@img/vk.png", alt="Vkontakte")
+        a.social-item(target="_blank")
+         svg.icon1
+            use(xlink:href="./svg/sprite.svg#vk")
         |
         |
-        a.social-item
-          img.icon4(src="@img/instagram.png", alt="Instagram")
+        a.social-item(target="_blank")
+          svg.icon1
+            use(xlink:href="./svg/sprite.svg#instagram")
       form(action="")
         input(type="text", placeholder="Ваше имя")
         input(type="tel", placeholder="Ваш телефон")
-        input(type="submit", value="Записаться")
+        input.submit(type="submit", value="Записаться")
         p Наш менеджер свяжется с вами в течении дня
 
 
