@@ -1,47 +1,61 @@
+$wrapper-width: 758px;
+$contacts-width: 210px;
+$form-width: 502px;
+$wrapper-height: 276px;
+$contacts-height: 170px;
+$social-height: 64px;
+
 @media (max-width: 1012px) {
   footer {
     height: 412px;
   }
+
   .wrapper {
-    width: 758px;
-    height: 276px;
+    height: $wrapper-height;
     grid-template-columns: 210px 502px;
-    grid-template-areas: 'cnts scl' 'cnts frm';
-    grid-column-gap: calc(758px - 210px - 502px);
-    grid-row-gap: calc(276px - 64px - 170px);
+    grid-template-areas: 'contacts social' 'contacts form';
+    grid-column-gap: $wrapper-width - $contacts-width - $form-width;
+    grid-row-gap: $wrapper-height - $social-height - $contacts-height;
   }
   .contacts {
-    height: 170px;
+    height: $contacts-height;
   }
   .social {
     width: 394px;
-    height: 64px;
+    height: $social-height;
   }
   form {
     height: 170px;
   }
 }
 
+$wrapper-height: 572px;
+$contacts-height: 66px;
+$form-height: 330px;
+
 @media (max-width: 778px) {
   footer {
     height: 804px;
   }
+
   .wrapper {
     width: 394px;
     height: 572px;
     grid-template-columns: 1fr;
-    grid-template-areas: 'scl' 'cnts' 'frm';
-    grid-row-gap: calc((572px - 64px - 66px - 330px) / 2);
+    grid-template-areas: 'social' 'contacts' 'form';
+    grid-row-gap: (
+        $wrapper-height - $social-height - $contacts-height - $form-height
+      ) / 2;
   }
   .social-item:nth-child(4) {
     order: -1;
   }
   .contacts {
-    height: 66px;
+    height: $contacts-height;
     flex-direction: row-reverse;
   }
   form {
-    height: 330px;
+    height: $form-height;
     flex-direction: column;
     input {
       width: 100%;

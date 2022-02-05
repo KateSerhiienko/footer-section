@@ -53,20 +53,20 @@ footer {
 }
 
 .wrapper {
-  width: 992px;
+  width: var(--wrapper-width);
   height: 170px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 210px 53px 174px 53px 502px;
   grid-template-columns: 210px 174px 502px;
-      grid-template-areas: "cnts scl frm";
+      grid-template-areas: "contacts social form";
   grid-column-gap: 53px;
 }
 
 .contacts {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: cnts;
+  grid-area: contacts;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -98,7 +98,7 @@ footer {
 .social {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
-  grid-area: scl;
+  grid-area: social;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -155,7 +155,7 @@ footer {
 form {
   -ms-grid-row: 1;
   -ms-grid-column: 5;
-  grid-area: frm;
+  grid-area: form;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -204,12 +204,11 @@ form p {
   }
 
   .wrapper {
-    width: 758px;
     height: 276px;
     -ms-grid-columns: 210px 46px 502px;
     grid-template-columns: 210px 502px;
     -ms-grid-rows: auto 42px auto;
-        grid-template-areas: "cnts scl" "cnts frm";
+        grid-template-areas: "contacts social" "contacts form";
     grid-column-gap: 46px;
     grid-row-gap: 42px;
   }
@@ -255,7 +254,7 @@ form p {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     -ms-grid-rows: auto 56px auto 56px auto;
-        grid-template-areas: "scl" "cnts" "frm";
+        grid-template-areas: "social" "contacts" "form";
     grid-row-gap: 56px;
   }
 
