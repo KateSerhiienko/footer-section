@@ -8,39 +8,40 @@ html(lang="en")
     title Footer
   body
     footer
-      .contacts
-        .contacts-item
-          b Телефон
-          a(href="tel:+123-45-67") 123-45-67
-        .contacts-item
-          b Электронная почта
-          a(href="mailto:email@gmail.com") email@gmail.com
-      .social
-        |
-        |
-        a.social-item(target="_blank")
-          svg.icon1
-            use(xlink:href="./svg/sprite.svg#twitter")
-        |
-        |
-        a.social-item(target="_blank")
-          svg.icon1
-            use(xlink:href="./svg/sprite.svg#facebook")
-        |
-        |
-        a.social-item(target="_blank")
-         svg.icon1
-            use(xlink:href="./svg/sprite.svg#vk")
-        |
-        |
-        a.social-item(target="_blank")
-          svg.icon1
-            use(xlink:href="./svg/sprite.svg#instagram")
-      form(action="")
-        input(type="text", placeholder="Ваше имя")
-        input(type="tel", placeholder="Ваш телефон")
-        input.submit(type="submit", value="Записаться")
-        p Наш менеджер свяжется с вами в течении дня
+      .wrapper 
+        .contacts
+          .contacts-item
+            b Телефон
+            a(href="tel:+123-45-67") 123-45-67
+          .contacts-item
+            b Электронная почта
+            a(href="mailto:email@gmail.com") email@gmail.com
+        .social
+          |
+          |
+          a.social-item(target="_blank")
+            svg.icon1
+              use(xlink:href="./svg/sprite.svg#twitter")
+          |
+          |
+          a.social-item(target="_blank")
+            svg.icon2
+              use(xlink:href="./svg/sprite.svg#facebook")
+          |
+          |
+          a.social-item(target="_blank")
+            svg.icon3
+              use(xlink:href="./svg/sprite.svg#vk")
+          |
+          |
+          a.social-item(target="_blank")
+            svg.icon4
+              use(xlink:href="./svg/sprite.svg#instagram")
+        form(action="")
+          input(type="text", placeholder="Ваше имя")
+          input(type="tel", placeholder="Ваш телефон")
+          input.submit(type="submit", value="Записаться")
+          p Наш менеджер свяжется с вами в течении дня
 
 
     script(src="js/app.min.js") 

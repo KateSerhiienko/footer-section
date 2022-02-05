@@ -33,24 +33,31 @@ body {
 }
 
 footer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 10px 1fr 10px 2fr;
-  grid-template-columns: 1fr 1fr 2fr;
-      grid-template-areas: "cnts scl frm";
-  grid-column-gap: 10px;
   max-width: 1440px;
   width: 100%;
+  height: 400px;
   margin: 0 auto;
-  padding: 120px 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #faf0d7;
+}
+
+.wrapper {
+  width: 992px;
+  height: 170px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 210px 53px 174px 53px 502px;
+  grid-template-columns: 210px 174px 502px;
+      grid-template-areas: "cnts scl frm";
+  grid-column-gap: 53px;
 }
 
 .contacts {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: cnts;
-  height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -83,8 +90,6 @@ footer {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: scl;
-  width: 174px;
-  height: 180px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -186,56 +191,75 @@ form p {
 
 @media (max-width: 1012px) {
   footer {
-    -ms-grid-columns: 1fr 2fr;
-    grid-template-columns: 1fr 2fr;
-    -ms-grid-rows: auto 40px auto;
+    height: 412px;
+  }
+
+  .wrapper {
+    width: 758px;
+    height: 276px;
+    -ms-grid-columns: 210px 46px 502px;
+    grid-template-columns: 210px 502px;
+    -ms-grid-rows: auto 42px auto;
         grid-template-areas: "cnts scl" "cnts frm";
-    grid-row-gap: 40px;
-    padding: 70px 110px;
+    grid-column-gap: 46px;
+    grid-row-gap: 42px;
+  }
+
+  .contacts {
+    height: 170px;
   }
 
   .social {
     width: 394px;
-    height: 70px;
+    height: 64px;
   }
 
   form {
-    width: 500px;
     height: 170px;
   }
+
   .contacts {
     -ms-grid-row: 1;
     -ms-grid-row-span: 3;
     -ms-grid-column: 1;
   }
+
   .social {
     -ms-grid-row: 1;
-    -ms-grid-column: 2;
+    -ms-grid-column: 3;
   }
+
   form {
     -ms-grid-row: 3;
-    -ms-grid-column: 2;
+    -ms-grid-column: 3;
   }
 }
 
-@media (max-width: 499px) {
+@media (max-width: 778px) {
   footer {
+    height: 804px;
+  }
+
+  .wrapper {
+    width: 394px;
+    height: 572px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -ms-grid-rows: auto 50px auto 50px auto;
+    -ms-grid-rows: auto 56px auto 56px auto;
         grid-template-areas: "scl" "cnts" "frm";
-    padding: 120px 50px;
-    grid-row-gap: 50px;
+    grid-row-gap: 56px;
+  }
+
+  .social-item:nth-child(4) {
+    order: -1;
   }
 
   .contacts {
-    width: 394px;
-    height: 70px;
+    height: 66px;
     flex-direction: row-reverse;
   }
 
   form {
-    width: 394px;
     height: 330px;
     flex-direction: column;
   }
@@ -252,17 +276,39 @@ form p {
   form p {
     margin-left: 10px;
   }
+
   .contacts {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     -ms-grid-column: 1;
   }
+
   .social {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
+
   form {
     -ms-grid-row: 5;
     -ms-grid-column: 1;
+  }
+}
+
+@media (max-width: 499px) {
+  footer {
+    height: 804px;
+  }
+
+  .wrapper {
+    max-width: 394px;
+    width: 96vw;
+  }
+
+  .social {
+    width: 100%;
+  }
+
+  .contacts {
+    width: 100%;
   }
 }
