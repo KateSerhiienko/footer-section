@@ -19,6 +19,15 @@
   font-style: normal;
 }
 
+:root {
+  --body-color: #333333;
+  --main-bg-color: #faf0d7;
+  --brand-color: #fe4e4e;
+  --light-color: #ffffff;
+  --text-color: #484848;
+  --accent-color: #435fdd;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -26,10 +35,10 @@
 }
 
 body {
-  background-color: #333333;
+  background-color: var(--body-color);
   font-size: 18px;
   font-family: "NotoSans", sans-serif;
-  color: #484848;
+  color: var(--text-color);
 }
 
 footer {
@@ -40,7 +49,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #faf0d7;
+  background-color: var(--main-bg-color);
 }
 
 .wrapper {
@@ -72,18 +81,18 @@ footer {
 .contacts b {
   font-size: 20px;
   line-height: 2.2;
-  color: #435fdd;
+  color: var(--accent-color);
 }
 
 .contacts a {
   font-weight: 500;
-  color: #484848;
+  color: var(--text-color);
   text-decoration: none;
   transition: 0.3s ease-in-out;
 }
 
 .contacts a:hover {
-  color: #fe4e4e;
+  color: var(--brand-color);
 }
 
 .social {
@@ -103,19 +112,19 @@ footer {
   justify-content: center;
   width: 64px;
   height: 64px;
-  border: 3px solid #fe4e4e;
+  border: 3px solid var(--brand-color);
   border-radius: 50%;
-  background-color: #fe4e4e;
+  background-color: var(--brand-color);
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 
 .social-item:hover {
-  background-color: #ffffff;
+  background-color: var(--light-color);
 }
 
 .social-item:hover use {
-  fill: #fe4e4e;
+  fill: var(--brand-color);
 }
 
 .social .icon1 {
@@ -139,7 +148,7 @@ footer {
 }
 
 .social use {
-  fill: #ffffff;
+  fill: var(--light-color);
   transition: 0.3s ease-in-out;
 }
 
@@ -159,8 +168,8 @@ form input {
   height: 58px;
   padding-left: 30px;
   border-radius: 37px;
-  border: 3px solid #ffffff;
-  background-color: #ffffff;
+  border: 3px solid var(--light-color);
+  background-color: var(--light-color);
   font-size: inherit;
   transition: 0.3s ease-in-out;
   outline: none;
@@ -173,14 +182,14 @@ form input:focus {
 
 form .submit {
   padding: 0;
-  border: 3px solid #fe4e4e;
-  background-color: #fe4e4e;
-  color: #ffffff;
+  border: 3px solid var(--brand-color);
+  background-color: var(--brand-color);
+  color: var(--light-color);
 }
 
 form .submit:hover {
-  background-color: #ffffff;
-  color: #fe4e4e;
+  background-color: var(--light-color);
+  color: var(--brand-color);
   font-weight: 500;
 }
 
