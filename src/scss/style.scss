@@ -27,19 +27,17 @@ footer {
 }
 
 $wrapper-width: 992px;
-$contacts-width: 210px;
-$social-width: 174px;
+$cont-width: 210px;
+$soc-width: 174px;
 $form-width: 502px;
 
 .wrapper {
   width: var(--wrapper-width);
   height: 170px;
   display: grid;
-  grid-template-columns: $contacts-width $social-width $form-width;
+  grid-template-columns: $cont-width $soc-width $form-width;
   grid-template-areas: 'contacts social form';
-  grid-column-gap: (
-      $wrapper-width - $contacts-width - $social-width - $form-width
-    ) / 2;
+  grid-column-gap: ($wrapper-width - $cont-width - $soc-width - $form-width) / 2;
 }
 
 .contacts {

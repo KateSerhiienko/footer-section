@@ -1,9 +1,9 @@
 $wrapper-width: 758px;
-$contacts-width: 210px;
+$cont-width: 210px;
 $form-width: 502px;
 $wrapper-height: 276px;
-$contacts-height: 170px;
-$social-height: 64px;
+$cont-height: 170px;
+$soc-height: 64px;
 
 @media (max-width: 1012px) {
   footer {
@@ -14,15 +14,15 @@ $social-height: 64px;
     height: $wrapper-height;
     grid-template-columns: 210px 502px;
     grid-template-areas: 'contacts social' 'contacts form';
-    grid-column-gap: $wrapper-width - $contacts-width - $form-width;
-    grid-row-gap: $wrapper-height - $social-height - $contacts-height;
+    grid-column-gap: $wrapper-width - $cont-width - $form-width;
+    grid-row-gap: $wrapper-height - $soc-height - $cont-height;
   }
   .contacts {
-    height: $contacts-height;
+    height: $cont-height;
   }
   .social {
     width: 394px;
-    height: $social-height;
+    height: $soc-height;
   }
   form {
     height: 170px;
@@ -30,7 +30,7 @@ $social-height: 64px;
 }
 
 $wrapper-height: 572px;
-$contacts-height: 66px;
+$cont-height: 66px;
 $form-height: 330px;
 
 @media (max-width: 778px) {
@@ -43,15 +43,14 @@ $form-height: 330px;
     height: 572px;
     grid-template-columns: 1fr;
     grid-template-areas: 'social' 'contacts' 'form';
-    grid-row-gap: (
-        $wrapper-height - $social-height - $contacts-height - $form-height
-      ) / 2;
+    grid-row-gap: ($wrapper-height - $soc-height - $cont-height - $form-height) /
+      2;
   }
   .social-item:nth-child(4) {
     order: -1;
   }
   .contacts {
-    height: $contacts-height;
+    height: $cont-height;
     flex-direction: row-reverse;
   }
   form {
